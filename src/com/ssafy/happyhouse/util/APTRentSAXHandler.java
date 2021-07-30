@@ -25,6 +25,9 @@ public class APTRentSAXHandler extends DefaultHandler {
 			                           , String qName, Attributes att ){
 		if(qName.equals("item")){
 			// complete code #04
+			house = new HouseDeal(HouseSaxParser.no++);
+			house.setType(HouseDeal.APT_RENT);
+			houses.add(house);
 			// APTDealSAXHandler Class 를 참조하여, 아파트 전월세 거래 정보에 맞도록 코드를 추가하세요.
 
 		}
