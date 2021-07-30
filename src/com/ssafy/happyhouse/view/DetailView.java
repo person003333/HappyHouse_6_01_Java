@@ -34,7 +34,7 @@ public class DetailView {
 	/**상권정보 표시할 table*/
 	private JTable			  	infoTable;
 	private JScrollPane		  	infoPan;
-	private String[]		  	infoTitle = { "이름", "지점명", "주소"};
+	private String[]		  	infoTitle = { "이름", "지점명", "동", "주소"};
 	
 	public void showInfoView(String dong, String gu) {
 		infoFrame = new JFrame("추가 정보");
@@ -62,13 +62,14 @@ public class DetailView {
 		// 상권 정보 
 		List<MarketInfo> marketList = service.searchMarket(dong);
 		
-		String[][] storeContents = new String[marketList.size()][3];
+		String[][] storeContents = new String[marketList.size()][4];
 		for(int i=0;i<marketList.size();i++) {
 			MarketInfo info = marketList.get(i);
 			
 			storeContents[i][0] = info.getMarketName();
 			storeContents[i][1] = info.getMarketsubName();
-			storeContents[i][2] = info.getAdress();
+			storeContents[i][2] = info.getDong();
+			storeContents[i][3] = info.getAdress();
 		}
 		
 		JPanel storePanel = new JPanel(new BorderLayout());
