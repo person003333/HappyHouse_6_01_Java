@@ -118,17 +118,12 @@
 
 - view/DetailView.java
     - 팝업 UI 관련 로직.
-- dto/BuildingInfo.java
-- dao/BuildingDao.java
-- service/BuildingService.java
-- util/CSVParser.java
-    - csv 파싱 로직.
-- dao/DataSource.java
-    - 쓰레드를 활용하여 용량 높은 파일을 읽어오는 로직을 가진 싱글톤 파일.
+- dto/MarketInfo.java
+- util/MArketHandler.java
 
 ### 특이사항
 
-- 원본 (서울) 데이터가 너무 커서, 쓰레드를 활용하였습니다. 다만 모든 파싱이 처리될 때 까지 blocking이 있을 수 있어서, UI 속도가 초반에는 버벅일 수 있습니다..
+- 원본 (서울) 데이터가 너무 커서, 편의점 데이터만을 사용하였습니다.
 
 ### 스크린샷
 
