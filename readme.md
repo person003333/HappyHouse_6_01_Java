@@ -156,4 +156,4 @@
      원본(서울 지역 상권) 데이터가 너무 커서, 편의점 데이터만 추출하여 사용하였습니다.
 
 ### 스크린샷
- <img src = "/uploads/6bbc1be0edbff5f71f560a38a6346959/추가기능.gif" width="50%">
+ <img src = "/uploads/a145a67a4043c5bd2fdb1acefb3d7591/추가기능.gif" width="50%">
