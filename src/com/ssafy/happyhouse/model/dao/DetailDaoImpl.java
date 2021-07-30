@@ -1,5 +1,6 @@
 package com.ssafy.happyhouse.model.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.ssafy.happyhouse.model.dto.AirInfo;
@@ -23,8 +24,14 @@ public class DetailDaoImpl implements DetailDao{
 	}
 
 	@Override
-	public List<MarketInfo> searchMarket() {
-		return markList;
+	public List<MarketInfo> searchMarket(String dong) {
+		List<MarketInfo> markList2 = new ArrayList<MarketInfo>();
+		for (MarketInfo mark : markList) {
+			if(mark.getDong().equals(dong)) {
+				markList2.add(mark);
+			}
+		}
+		return markList2;
 	}
 
 	@Override

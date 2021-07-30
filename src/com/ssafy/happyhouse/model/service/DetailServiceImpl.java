@@ -16,8 +16,8 @@ public class DetailServiceImpl implements DetailService{
 	}
 
 	@Override
-	public List<MarketInfo> searchMarket() {
-		return dao.searchMarket();
+	public List<MarketInfo> searchMarket(String dong) {
+		return dao.searchMarket(dong);
 	}
 
 	@Override

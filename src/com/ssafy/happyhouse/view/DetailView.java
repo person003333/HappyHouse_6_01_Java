@@ -36,14 +36,14 @@ public class DetailView {
 	private JScrollPane		  	infoPan;
 	private String[]		  	infoTitle = { "이름", "지점명", "주소"};
 	
-	public void showInfoView() {
+	public void showInfoView(String dong, String gu) {
 		infoFrame = new JFrame("추가 정보");
 		
 		// view 구성 
 		JPanel panel = new JPanel(new BorderLayout());
 		
 		// 환경 정보 
-		AirInfo air = service.search("종로구");
+		AirInfo air = service.search(gu);
 		
 		String[][] envContents = {
 				{Double.toString(air.getNO2()), Double.toString(air.getO3()), Double.toString(air.getCO()), 
@@ -60,7 +60,7 @@ public class DetailView {
 		envirPanel.add(new Label(""),"South");
 		
 		// 상권 정보 
-		List<MarketInfo> marketList = service.searchMarket();
+		List<MarketInfo> marketList = service.searchMarket(dong);
 		
 		String[][] storeContents = new String[marketList.size()][3];
 		for(int i=0;i<marketList.size();i++) {
@@ -91,7 +91,11 @@ public class DetailView {
 	
 	public DetailView() {
 		service = new DetailServiceImpl();
-		showInfoView();
+		showInfoView("사직동","종로구");
+	}
+	public DetailView(String dong, String gu) {
+		service = new DetailServiceImpl();
+		showInfoView(dong, gu);
 	}
 	
 }

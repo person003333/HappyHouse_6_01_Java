@@ -69,6 +69,8 @@ public class HouseInfoView{
 	
 	/**화면에 표시하고 있는 주택*/
 	private HouseDeal curHouse;
+	private String gu = "종로구";
+	private String dong = "사직동";
 	
 	/**환경정보와 상권정보 누르는 버튼*/
 	private JButton			  	infoBt;
@@ -97,6 +99,7 @@ public class HouseInfoView{
 											,curHouse.getDealDay()
 											));
 		houseInfoL[8].setText(curHouse.getDong());
+		dong = curHouse.getDong();
 		houseInfoL[9].setText(curHouse.getJibun());
 		
 		System.out.println("###############" + curHouse.getImg());
@@ -254,7 +257,7 @@ public class HouseInfoView{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new DetailView();
+				new DetailView(dong,gu);
 			}
 		});
 		

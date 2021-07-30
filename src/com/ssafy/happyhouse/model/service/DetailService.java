@@ -7,7 +7,7 @@ import com.ssafy.happyhouse.model.dto.MarketInfo;
 
 public interface DetailService {
 	
-	public List<MarketInfo> searchMarket();
+	public List<MarketInfo> searchMarket(String dong);
 	
 	public AirInfo search(String gu);
 }
