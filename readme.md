@@ -84,7 +84,6 @@
     
 - dto/AirInfo.java
 - util/AirHandler.java
-    - csv 파싱 로직.
 
 ### 특이사항
 
