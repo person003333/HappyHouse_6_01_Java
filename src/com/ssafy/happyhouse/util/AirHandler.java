@@ -6,20 +6,22 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ssafy.happyhouse.model.dto.Airinfo;
+import org.xml.sax.helpers.DefaultHandler;
+
+import com.ssafy.happyhouse.model.dto.AirInfo;
 
 
-public class AirHandler {
-	private List<Airinfo> airInfo = new ArrayList<Airinfo>();
+public class AirHandler extends DefaultHandler{
+	private List<AirInfo> airInfo = new ArrayList<AirInfo>();
 	
 	
 	public AirHandler() {
 		this.reader();
 	}
 	
-	public Airinfo search(String gu) {
-		Airinfo air = new Airinfo();
-		for (Airinfo ai : airInfo) {
+	public AirInfo search(String gu) {
+		AirInfo air = new AirInfo();
+		for (AirInfo ai : airInfo) {
 			if(ai.getName().equals(gu)) {
 				air = ai;
 				break;
@@ -28,7 +30,7 @@ public class AirHandler {
 		return air;
 	}
 
-	private List<Airinfo> reader() {
+	private List<AirInfo> reader() {
 		String line = null;
 		File location = new File("res/air.csv");
 		
@@ -36,7 +38,7 @@ public class AirHandler {
 			BufferedReader in = new BufferedReader(new FileReader(location));
 			while((line = in.readLine())!=null) {
 				String[] arr= line.split(",");
-				Airinfo m = new Airinfo();
+				AirInfo m = new AirInfo();
 				m.setName(arr[2]);
 				m.setNO2(Double.parseDouble(arr[3]));
 				m.setO3(Double.parseDouble(arr[4]));
@@ -58,10 +60,14 @@ public class AirHandler {
 		return airInfo;
 		 
 	}
+
+	public List<AirInfo> getAirInfo() {
+		return airInfo;
+	}
 	
 //	public static void main(String[] args) {
 //		AirHandler m = new AirHandler();
-//		for(Airinfo mi : m.reader()) {
+//		for(AirInfo mi : m.reader()) {
 //			System.out.println(mi);
 //		}
 //		System.out.println();

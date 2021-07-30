@@ -1,5 +1,6 @@
 package com.ssafy.happyhouse.view;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
@@ -21,7 +22,6 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-import com.ssafy.happyhouse.HappyHouseException;
 import com.ssafy.happyhouse.model.dto.HouseDeal;
 import com.ssafy.happyhouse.model.dto.HousePageBean;
 import com.ssafy.happyhouse.model.service.HouseService;
@@ -69,7 +69,9 @@ public class HouseInfoView{
 	
 	/**화면에 표시하고 있는 주택*/
 	private HouseDeal curHouse;
-
+	
+	/**환경정보와 상권정보 누르는 버튼*/
+	private JButton			  	infoBt;
 	
 	private void showHouseInfo(int code) {
 		
@@ -97,7 +99,7 @@ public class HouseInfoView{
 		houseInfoL[8].setText(curHouse.getDong());
 		houseInfoL[9].setText(curHouse.getJibun());
 		
-		//System.out.println("###############" + curHouse.getImg());
+		System.out.println("###############" + curHouse.getImg());
 		
 		ImageIcon icon = null;
 		if( curHouse.getImg() != null && curHouse.getImg().trim().length() != 0) {
@@ -147,7 +149,6 @@ public class HouseInfoView{
 
 	/**메인 화면인 주택 목록을 위한 화면 셋팅하는 메서드  */
 	public void setMain(){
-		
 		/*왼쪽 화면을 위한 설정 */
 		JPanel left = new JPanel(new BorderLayout());
 		JPanel leftCenter = new JPanel(new GridLayout(1, 2));
@@ -168,7 +169,14 @@ public class HouseInfoView{
 		leftCenter.add(imgL);
 		leftCenter.add(leftR);
 		
-		left.add(new JLabel("아파트 거래 정보", JLabel.CENTER),"North");
+		JPanel label = new JPanel(new GridLayout(2, 1));
+		
+		label.add(new JLabel("아파트 거래 정보", JLabel.CENTER),"North");
+		
+		infoBt = new JButton("추가 정보 보기");
+		label.add(infoBt);
+		
+		left.add(label, "North");
 		left.add(leftCenter,"Center");
 		
 		
@@ -242,16 +250,14 @@ public class HouseInfoView{
 			}
 		});
 		
-		// 참조코드 시작 - 위 코드를 완성 후 삭제 또는 comment 처리하세요.
-		ActionListener buttonHandler = new ActionListener() {
+		infoBt.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				searchHouses();
+				new DetailView();
 			}
-		};
+		});
 		
-		searchBt.addActionListener( buttonHandler );
-		// 참조코드 종료
 		
 		showHouses();
 	}
@@ -299,6 +305,7 @@ public class HouseInfoView{
 			houseModel.setDataVector(data, title);
 		}
 	}
+	
 //	public static void main(String[] args) {
 //		new HouseInfoView();
 //	}

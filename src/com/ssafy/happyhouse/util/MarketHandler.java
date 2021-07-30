@@ -7,10 +7,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.xml.sax.helpers.DefaultHandler;
+
 import com.ssafy.happyhouse.model.dto.MarketInfo;
 import com.ssafy.happyhouse.view.HouseInfoView;
 
-public class MarketHandler {
+public class MarketHandler extends DefaultHandler{
 	
 	private List<MarketInfo> market = new ArrayList<MarketInfo>();
 	
@@ -18,6 +20,7 @@ public class MarketHandler {
 	public MarketHandler() {
 		this.reader();
 	}
+	
 	public List<MarketInfo> search(String dong){
 		List<MarketInfo> search = new ArrayList<MarketInfo>();
 		for (MarketInfo marketInfo : market) {
@@ -27,6 +30,7 @@ public class MarketHandler {
 		}
 		return search;
 	}
+	
 	private List<MarketInfo> reader() {
 		String line = null;
 		File location = new File("res/종로구_편의점.csv");
@@ -52,6 +56,10 @@ public class MarketHandler {
 		
 		return market;
 		 
+	}
+
+	public List<MarketInfo> getMarket() {
+		return market;
 	}
 	
 //	public static void main(String[] args) {

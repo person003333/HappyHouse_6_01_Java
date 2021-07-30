@@ -1,6 +1,6 @@
 package com.ssafy.happyhouse.model.dto;
 
-public class Airinfo {
+public class AirInfo {
 
 	//구 이름
 	private String Name;

@@ -1,21 +1,16 @@
 package com.ssafy.happyhouse.model.dto;
 
 public class MarketInfo {
-	/**거래 정보를 식별할 번호*/
 	private int    no;
 	/**법정 동명 */
 	private String dong;
-	/**아파트 이름 */
 	private String marketName;
 	//지점
 	private String marketsubName;
-	/**법정 동코드 */
 	private int code;
 	//주소
 	private String adress;
-	/**층*/
 	private int floor;
-	/**지번*/
 	public int getNo() {
 		return no;
 	}
