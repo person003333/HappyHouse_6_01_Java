@@ -56,7 +56,7 @@ public class APTRentSAXHandler extends DefaultHandler {
 		}else if(qName.equals("일")) { 
 			// complete code #07;
 			house.setDealDay(Integer.parseInt(temp));
-			// 일 항목을 처리하세요.
+			// 일 항목을 처리하세요
 		}else if(qName.equals("전용면적")) { 
 			house.setArea(Double.parseDouble(temp));
 		}else if(qName.equals("지번")) { 
