@@ -37,35 +37,44 @@
 
 1. 전체 거래 정보 검색
 
-     ![IMG/Untitled.png](IMG/Untitled.png)
+     <img src = "/uploads/26885bc15077c70bed1dbd9959c428a7/전체거래정보검색.gif" width="50%">
+<br>
 
 2. 거래 정보 필터링 검색
     - 아파트/주택 별
         - 아파트 검색
 
-            ![IMG/Untitled_1.png](IMG/Untitled_1.JPG)
+            <img src = "/uploads/20af7fc7b02cc2e7ad54e296423d5162/아파트검색.gif" width="50%">
+
+         <br>
 
         - 주택 검색
 
-            ![IMG/Untitled_2.png](IMG/Untitled_2.JPG)
-        
+            <img src = "/uploads/b5f4acc619f16fcfb371fef457401c26/주택검색.gif" width="50%">
+         <br>
+
     - 매매/전,월세 별
         - 매매 검색
 
-            ![IMG/Untitled_3.png](IMG/Untitled_3.png)
+            <img src = "/uploads/214eddcc0e8a0b9cf8a21ecccd6ee096/매매.gif" width="50%">
+
+         <br>
 
         - 전,월세 검색
 
-            ![IMG/Untitled_4.png](IMG/Untitled_4.png)
+            <img src = "/uploads/d95d87de0d2242c6aecb8e93efe5942d/전월세.gif" width="50%">
+         <br>
 
     - 동/아파트 이름 별
         - "숭인" 동 검색
 
-            ![IMG/Untitled_5.png](IMG/Untitled_5.png)
+            <img src = "/uploads/33c3547afdde34fea7b69eacccdab399/숭인.gif" width="50%">
+
+         <br>
 
         - "아남1" 아파트 검색
 
-            ![IMG/Untitled_6.png](IMG/Untitled_6.png)
+            <img src = "/uploads/7e92a54a1292e45d2493c4579d76c653/아남1.gif" width="50%">
 
 <br>
 
@@ -147,4 +156,4 @@
      원본(서울 지역 상권) 데이터가 너무 커서, 편의점 데이터만 추출하여 사용하였습니다.
 
 ### 스크린샷
-     ![IMG/Untitled_8.png](IMG/Untitled_8.png)
+ <img src = "/uploads/6bbc1be0edbff5f71f560a38a6346959/추가기능.gif" width="50%">
