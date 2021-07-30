@@ -54,18 +54,18 @@ public class MarketHandler {
 		 
 	}
 	
-	public static void main(String[] args) {
-		MarketHandler m = new MarketHandler();
-		for(MarketInfo mi : m.reader()) {
-			System.out.println(mi);
-		}
-		System.out.println();
-		List<MarketInfo> m2 = m.search("안국동");
-		
-		for (MarketInfo mi : m2) {
-			System.out.println(mi);
-		}
-		
-	}
+//	public static void main(String[] args) {
+//		MarketHandler m = new MarketHandler();
+//		for(MarketInfo mi : m.reader()) {
+//			System.out.println(mi);
+//		}
+//		System.out.println();
+//		List<MarketInfo> m2 = m.search("안국동");
+//		
+//		for (MarketInfo mi : m2) {
+//			System.out.println(mi);
+//		}
+//		
+//	}
 	
 }

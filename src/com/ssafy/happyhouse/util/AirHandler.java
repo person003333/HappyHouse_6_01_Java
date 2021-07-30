@@ -59,14 +59,14 @@ public class AirHandler {
 		 
 	}
 	
-	public static void main(String[] args) {
-		AirHandler m = new AirHandler();
-		for(Airinfo mi : m.reader()) {
-			System.out.println(mi);
-		}
-		System.out.println();
-		System.out.println(m.search("종로구"));
-	}
+//	public static void main(String[] args) {
+//		AirHandler m = new AirHandler();
+//		for(Airinfo mi : m.reader()) {
+//			System.out.println(mi);
+//		}
+//		System.out.println();
+//		System.out.println(m.search("종로구"));
+//	}
 	
 	
 }
